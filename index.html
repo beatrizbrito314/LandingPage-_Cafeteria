@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="src/styles/style.css">
+    <link rel="stylesheet" href="src/styles/navbar.css">
+    <link rel="stylesheet" href="src/styles/home.css">
+    <link rel="stylesheet" href="src/styles/itens.css">
+    <link rel="stylesheet" href="src/styles/footer.css">
+    <link rel="stylesheet" href="src/styles/feedbacks.css">
+    <title>Landig Page</title>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <i class="fa-solid fa-mug-hot" id="logo"> Vanille</i>
+            <ul id="nav-list">
+                <li class="nav-item">
+                    <a href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#content-item">Destaque</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#feedback-id">Feedbacks</a>
+                </li>
+            </ul>
+            <button class="btn-default">Peça Aqui</button>
+            <!--botão mobile-->
+            <button id="btn-mobile" onclick="exibirMenu(); contentMobile()"><i class="fa-solid fa-bars"></i></button>
+        </nav>
+        <!--nav mobile-->
+        <div id="nav-mobile">
+            <ul id="mobile-nav-list">
+                <li class="mobile-nav-item">
+                    <a href="#home">Home</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#content-item">Destaque</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#feedback-id">Feedbacks</a>
+                </li>
+            </ul>
+            <button class="btn-nav-mobile">Peça Aqui</button>
+            
+        </div>
+    </header>
+    <main id="content">
+        <section id="home">
+            <div id="cta">
+                <h1 class="title">
+                    Transforme seu dia com um xícara de
+                    <span>Felicidade</span>
+                </h1>
+                <p class="description">Experimente nosso novo sabor exclusivo</p>
+                <div id="cta-buttons">
+                    <a href="tel:+55555" id="phone-btn">
+                         <button class="btn-phone">
+                            <i class="fa-solid fa-phone"></i>
+                            +55 (00)0000-0000
+                         </button>
+                    </a> 
+                </div>
+                <div class="social-media-btn">
+                    <a href="">
+                        <i class="fa-brands fa-square-whatsapp"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-square-instagram"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-square-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            <div id="shape"></div>
+
+            <div id="banner">
+                <img src="src/images/banner-img.png" alt="Xícara de café, com decoração em formato de coração" class="img-banner">
+            </div>
+            
+
+        </section>
+        <section id="content-item">
+            <h1>O Melhor do Café</h1>
+           <table class="item-table">
+            <tr>
+                <td>
+                    <button class="open-modal" data-modal="modal1">
+                        <img src="src/images/item-1.jpg" alt="Expresso clássico servido em uma xícara" class="img-modal">
+                        <h3>Espresso Clássico</h3>
+                    </button>
+                    <dialog id="modal1" class="modal-itens">
+                        <img src="src/images/item-1.jpg" alt="Expresso clássico servido em uma xícara" class="img-modal-on">
+                        <h3>Espresso Clássico</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <button class="close-modal"><i class="fa-solid fa-circle-xmark"></i></button>
+                    </dialog>
+                </td>
+                <td>
+                    <button class="open-modal" data-modal="modal2">
+                        <img src="src/images/item-2.jpg" alt="Bebida feita de café com chocolate, servida em um recipiente comestível" class="img-modal">
+                        <h3>Chocafé</h3>
+                    </button>
+                    <dialog id="modal2" class="modal-itens">
+                        <img src="src/images/item-2.jpg" alt="Bebida feita de café com chocolate, servida em um recipiente comestível" class="img-modal-on">
+                        <h3>Chocafé</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <button class="close-modal"><i class="fa-solid fa-circle-xmark"></i></button>
+                    </dialog>
+                </td>
+                <td>
+                    <button class="open-modal" data-modal="modal3">
+                        <img src="src/images/item-3.jpg" alt="frappuccino gelado em um copo grande, com borda de caramelo com nozes" class="img-modal">
+                        <h3>Frapuccino Especial</h3>
+                    </button>
+                    <dialog id="modal3" class="modal-itens">
+                        <img src="src/images/item-3.jpg" alt="frappuccino gelado em um copo grande, com borda de caramelo com nozes" class="img-modal-on">
+                        <h3>Frapuccino Especial</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <button class="close-modal"><i class="fa-solid fa-circle-xmark"></i></button>
+                    </dialog>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="open-modal" data-modal="modal4">
+                        <img src="src/images/item-4.jpg" alt="Mocha Latte servido em uma xícara, coberto com espuma de leite e chocolate" class="img-modal">
+                        <h3>Mocha Latte</h3>
+                    </button>
+                    <dialog id="modal4" class="modal-itens">
+                        <img src="src/images/item-4.jpg" alt="Mocha Latte servido em uma xícara, coberto com espuma de leite e chocolate" class="img-modal-on">
+                        <h3>Mocha Latte</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <button class="close-modal"><i class="fa-solid fa-circle-xmark"></i></button>
+                    </dialog>
+                </td>
+                <td>
+                    <button class="open-modal" data-modal="modal5">
+                        <img src="src/images/item-5.jpg" alt="Cappuccino clássico servido em uma xícara, com espuma de leite e polviljado cacau" class="img-modal">
+                        <h3>Cappuccino Clásico</h3>
+                    </button>
+                    <dialog id="modal5" class="modal-itens">
+                        <img src="src/images/item-5.jpg" alt="Cappuccino clássico servido em uma xícara, com espuma de leite e polviljado cacau" class="img-modal-on">
+                        <h3>Cappuccino Clásico</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <button class="close-modal"><i class="fa-solid fa-circle-xmark"></i></button>
+                    </dialog>
+                </td>
+                <td>
+                    <button class="open-modal"  data-modal="modal6">
+                        <img src="src/images/item-6.jpg" alt="Latte Macchiato servido em ua xícara, com espuma de leite, cacau e canela" class="img-modal">
+                        <h3>Latte Macchiato</h3>
+                    </button>
+                    <dialog id="modal6" class="modal-itens">
+                        <img src="src/images/item-6.jpg" alt="Latte Macchiato servido em ua xícara, com espuma de leite, cacau e canela" class="img-modal-on">
+                        <h3>Latte Macchiato</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <button class="close-modal"><i class="fa-solid fa-circle-xmark"></i></button>
+                    </dialog>
+                </td>
+            </tr>
+           </table>
+        </section>
+
+        <section id="feedbacks">
+            <div id="feedback-id"></div> 
+            <div class="feedback-title"><h1>O que nossos clientes dizem</h1></div>
+            <div class="shape-3"></div>
+            <div class="shape-2"></div>
+            <div class="container-slider">
+                <button id="prev-btn"><i class="fa-solid fa-caret-left"></i></button>
+                <div class="container-img">
+                    <img src="src/images/feedback-1.jpg" alt="planta" class="slider on">
+                    <img src="src/images/feedback-2.jpg" alt="planta" class="slider">
+                </div>
+                <button id="next-btn"><i class="fa-solid fa-caret-right"></i></button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div id="footer">
+            <i class="fa-solid fa-mug-hot" id="logo-footer">Vanille</i>
+            <ul id="footer-list">
+                <li class="footer-itens">
+                    <a href="">Privacidade</a>
+                    <p>Termos de uso</p>
+                    <p>Cookies</p>
+                    <p>Políticas de Privacidade</p>
+                </li>
+                <li class="footer-itens">
+                    <a href="#item2">Sobre nós</a>
+                    <p>Localização</p>
+                    <p>e-mail: vanille@gmail.com </p>
+                    <p>Telefone: +55 (00)0000-0000</p>
+                </li>
+                <li class="footer-itens">
+                    <a href="#item3">Redes Sociais</a>
+                    <div class="social-media-btn-footer">
+                        <a href="">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa-brands fa-x"></i>
+                        </a>
+
+                </li>
+        </div>
+    </footer>
+
+    <script src="src/javascript/script.js"></script>
+</body>
+</html>
