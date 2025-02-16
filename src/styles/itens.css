@@ -43,7 +43,9 @@
     margin: 4px;
 }
 .item-table td:hover{
-    padding: 5px;
+    transition: .2s ease-out;
+    padding: 18px;
+
 }
 .img-modal{
     margin: auto;
@@ -63,7 +65,6 @@
     padding: 10px;
     background-color: #b39977;
     box-shadow: 0px 12px 16px 0.7px #251b1195;
-
 }
 dialog::backdrop {
     background-color:#342519cd; 
