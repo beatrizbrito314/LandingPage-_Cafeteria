@@ -29,31 +29,15 @@ body{
     flex-direction: column;
     height: 100%;
 }
-.btn-default{
-    border: none;
-    display: flex;
-    background-color: #b39977;
-    color: #342519;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-    box-shadow: 0px 0px 10px 2px #1a1208;
-    cursor: pointer;
-    padding: 10px;
-    transition: .2s ease;
-}
-.btn-default:hover{
-    padding: 12px;
-}
 section{
     padding: 28px 8%;
 }
 #content.active{
-    transition: .3s ease;
+    transition: all .6s ease-out;
     margin-top: 160px;
+    z-index: -1;
 }
 #content{
-    transition: .3s ease;
     margin-top:0px;
 }
 

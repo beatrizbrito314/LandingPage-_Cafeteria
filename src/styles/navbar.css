@@ -4,6 +4,7 @@ header{
     padding: 3%;
     box-shadow: 0px 0px 15px 4px #150f0b;
 }
+
 #navbar{
     width: 100%;
     display: flex;
@@ -29,6 +30,22 @@ header{
 .nav-item.active{
     color: #b39977;
     border-bottom: 3px solid #b39977 ;
+}
+.btn-default{
+    border: none;
+    display: flex;
+    background-color: #b39977;
+    color: #342519;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px 2px #1a1208;
+    cursor: pointer;
+    padding: 10px;
+    transition: .2s ease;
+}
+.btn-default:hover{
+    padding: 12px;
 }
 #btn-mobile, .btn-nav-mobile{
     display: none;
@@ -62,12 +79,13 @@ header{
         width: 100%;
         background-color: #342519;
         box-shadow: 0px 7px 11px #2d2119;
-        transition: all 0.3s ease-in-out;
+        transition: all 1s ease;
         
     }
     #nav-mobile a{
         text-decoration: none;
         color: #b39977;
+
     }#nav-mobile a:hover{
         text-decoration:underline;
     }
@@ -77,18 +95,19 @@ header{
     .btn-nav-mobile{
         border: none;
         display: flex;
-        height: 17px;
-        width: 70px;
+        height: 20px;
         margin: auto;
+        width: 70px;
         margin-top: 8px;
         background-color: #b39977;
         color: #342519;
         align-items: center;
         justify-content: center;
-        border-radius: 15px;
+        border-radius: 12px;
         box-shadow: 0px 0px 10px 2px #1a1208;
         cursor: pointer;
-        padding: 18px;
+        padding: 20px;
+        margin-top: 10px;
         transition: .3s ease;
     }
     .btn-nav-mobile:hover{

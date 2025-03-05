@@ -67,7 +67,7 @@
     box-shadow: 0px 12px 16px 0.7px #251b1195;
 }
 dialog::backdrop {
-    background-color:#342519cd; 
+    backdrop-filter: blur(4px);
     transition: background 0.6s ease;
 }
 body.modal-aberto {
@@ -79,9 +79,6 @@ body.modal-aberto {
     background-color: transparent;
     cursor: pointer;
     color: #342519;
-}
-.close-modal:hover{
-    font-size: 3px;
 }
 @media screen and (max-width: 860px) {
     #content-item td{
