@@ -79,9 +79,6 @@
     color: #b39977;
 }
 
-/* ===============================
-   SHAPE
-=============================== */
 #shape {
     background-color: #684f36;
     width: 300px;
@@ -112,10 +109,7 @@
     margin: 0 auto;
 }
 
-/* ===============================
-   RESPONSIVO
-=============================== */
-@media screen and (max-width: 1008px) {
+@media screen and (max-width: 730px) {
     #home {
         flex-direction: column;
         align-items: center;
