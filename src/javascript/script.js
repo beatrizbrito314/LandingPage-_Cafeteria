@@ -1,48 +1,55 @@
-/*no elemento que possui "nav-mobile" como id, adiciona/remove
-    a classe open atrevés do "classList" ao clicar no botão (btn-mobile)
-*/
-function exibirMenu(){
-    let menuMobile = document.getElementById('nav-mobile');
-    if(menuMobile.classList.contains('open')){
-        menuMobile.classList.remove('open');
-     } else {
-        menuMobile.classList.toggle('open');
-    }
-}
-function contentMobile(){
-    let newContent = document.getElementById('content');
-    if(newContent.classList.contains('active')){
-        newContent.classList.remove('active');
-     } else {
-        newContent.classList.toggle('active');
-    }
-}
 
-//abrir modal
-const openBtn=document.querySelectorAll('.open-modal');
-openBtn.forEach(button=>{
-    button.addEventListener('click',()=>{
-        const modalId=button.getAttribute('data-modal');
-        const modal=document.getElementById(modalId);
+const menuMobile = document.getElementById('nav-mobile');
+const btnMobile = document.getElementById('btn-mobile');
+
+btnMobile.addEventListener('click', (e) => {
+    menuMobile.classList.toggle('open');
+    e.stopPropagation();
+});
+
+
+document.addEventListener('click', (e) => {
+    if (menuMobile.classList.contains('open')) {
+        if (!menuMobile.contains(e.target) && !btnMobile.contains(e.target)) {
+            menuMobile.classList.remove('open');
+        }
+    }
+});
+
+
+menuMobile.addEventListener('click', (e) => {
+    e.stopPropagation();
+});
+
+
+const openBtns = document.querySelectorAll('.open-modal');
+const closeBtns = document.querySelectorAll('.close-modal');
+
+openBtns.forEach(button => {
+    button.addEventListener('click', () => {
+        const modalId = button.getAttribute('data-modal');
+        const modal = document.getElementById(modalId);
         modal.showModal();
         document.body.classList.add("modal-aberto");
-    })
-})
-//fechar modal
-const closeBtn=document.querySelectorAll('.close-modal');
-closeBtn.forEach(button => {
-    button.addEventListener("click", () => {
-        button.closest("dialog").close();
-        document.body.classList.remove("modal-aberto");
-        
     });
 });
-//carrosel de imagens:
+
+closeBtns.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = button.closest("dialog");
+        if (modal) {
+            modal.close();
+            document.body.classList.remove("modal-aberto");
+        }
+    });
+});
+
+
 const slider = document.querySelectorAll('.slider');
 const btnPrev = document.getElementById('prev-btn');
 const btnNext = document.getElementById('next-btn');
 
-let currentSlide = 0; // Usa 'let' em vez de 'var'
+let currentSlide = 0;
 
 function hideSlider() {
     slider.forEach(item => item.classList.remove('on'));
@@ -51,18 +58,28 @@ function hideSlider() {
 function showSlider() {
     slider[currentSlide].classList.add('on');
 }
+
 function nextSlide() {
     hideSlider();
-    currentSlide = (currentSlide + 1) % slider.length; // Alternativa mais compacta
+    currentSlide = (currentSlide + 1) % slider.length;
     showSlider();
 }
 
 function prevSlide() {
     hideSlider();
-    currentSlide = (currentSlide - 1 + slider.length) % slider.length; // Evita números negativos
+    currentSlide = (currentSlide - 1 + slider.length) % slider.length;
     showSlider();
 }
 
-// Adiciona eventos corretamente
+// Eventos do carrossel
 btnPrev.addEventListener('click', prevSlide);
 btnNext.addEventListener('click', nextSlide);
+
+// Inicializa o primeiro slide
+showSlider();
+
+
+function contentMobile() {
+    const newContent = document.getElementById('content');
+    newContent.classList.toggle('active');
+}
